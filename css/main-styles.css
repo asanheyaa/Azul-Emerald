@@ -513,7 +513,7 @@ body._lock {
 .story {
   padding-top: 111px;
   padding-bottom: 59px;
-  background: url(../img/story/line-decor.svg) 0 1.5%/cover no-repeat;
+  background: url(../img/story/line-decor.svg) 0 25.5%/cover no-repeat;
 }
 @media (max-width: 1330px) {
   .story {
