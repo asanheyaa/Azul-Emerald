@@ -172,7 +172,7 @@ const swiperAbout = new Swiper('.swiper-about', {
 	},
 	spaceBetween: 30,
 	autoHeight:true,
-	
+	allowTouchMove: false,
 	
 
 
