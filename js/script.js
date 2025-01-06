@@ -126,8 +126,8 @@ const swiperHero = new Swiper('.swiper-hero', {
 		el: ".swiper-hero__pagination",
 		type: "fraction",
 		renderFraction: function (currentClass, totalClass) {
-			return '<span class="' + currentClass + '"></span>' +
-				'<span class="' + totalClass + '"></span>';
+			return `<span class="${currentClass} swiper-pagination-box__current"></span>` +
+				`<span class="${totalClass} swiper-pagination-box__total"></span>`;
 		}
 	},
 	autoplay: {
@@ -143,13 +143,13 @@ const swiperStory = new Swiper('.swiper-story', {
 		el: ".swiper-story__pagination",
 		type: "fraction",
 		renderFraction: function (currentClass, totalClass) {
-			return '<span class="' + currentClass + '"></span>' +
-				'<span class="' + totalClass + '"></span>';
+			return `<span class="${currentClass} swiper-pagination-box__current"></span>` +
+				`<span class="${totalClass} swiper-pagination-box__total"></span>`;
 		}
 	},
 	spaceBetween: 30,
 	breakpoints: {
-		991: {
+		992: {
 			slidesPerView: 1.5,
 			spaceBetween: 70,
 		},
