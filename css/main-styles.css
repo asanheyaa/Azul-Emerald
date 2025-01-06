@@ -603,6 +603,43 @@ body._lock {
     background: rgba(255, 255, 255, 0.3);
   }
 }
+.header .select__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+.header .select__value {
+  color: rgb(255, 255, 255);
+  font-family: Adobe Caslon Pro;
+  line-height: 1; /* 22/18 */
+  text-transform: uppercase;
+}
+.header .select__body {
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.1);
+}
+.header .select__item {
+  color: rgb(255, 255, 255);
+  font-family: Adobe Caslon Pro;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.header .select__item span {
+  position: relative;
+  top: 0.2em;
+}
+@media (any-hover: hover) {
+  .header .select__item:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
 
 .burger {
   -webkit-backdrop-filter: blur(9px);
