@@ -6,37 +6,61 @@
 // 	document.body.classList.toggle('_lock');
 // });
 
+// dropdown menu
+// dropdown Menu function
 function selectMenu() {
-	const selects = document.querySelectorAll('.select');
+	const selects = document.querySelectorAll('[data-select-menu]');
+
+	// data-select-menu main data-atribute
+	// data-select-menu-button open close dropdown menu
+	// data-select-menu-value value of data-select-menu-button
+	// data-select-menu-drop-down body of dropdown menu
+	// data-select-menu-option options of dropdown menu
 
 	if (selects) {
-		const selectHeaders = document.querySelectorAll('.select__header');
-		const selectItems = document.querySelectorAll('.select__item');
 
-		selectHeaders.forEach(el => {
-			el.addEventListener('click', selectToggle)
-		});
-		selectItems.forEach(el => {
-			el.addEventListener('click', selectChoose)
+		document.documentElement.addEventListener('click', collapseSelects)
+
+		selects.forEach(select => {
+
+			const selectButton = select.querySelector('[data-select-menu-button]');
+			const selectOptions = select.querySelectorAll('[data-select-menu-option]');
+
+			selectButton.addEventListener('click', selectToggle)
+			selectOptions.forEach(el => {
+				el.addEventListener('click', selectChoose)
+			});
 		});
 
 
 
 		function selectToggle(e) {
-			const parent = this.parentElement,
-				selectBody = parent.querySelector('.select__body');
+			const parent = e.target.closest('[data-select-menu]'),
+				selectBody = parent.querySelector('[data-select-menu-drop-down]');
 			parent.classList.toggle('_active')
 			_slideToggle(selectBody, 300)
 		}
 
 		function selectChoose(e) {
-			const parent = this.closest('.select'),
-				selectValue = parent.querySelector('.select__value'),
-				selectBody = parent.querySelector('.select__body');
+			const parent = e.target.closest('[data-select-menu]'),
+				selectValue = parent.querySelector('[data-select-menu-value]'),
+				selectBody = parent.querySelector('[data-select-menu-drop-down]');
 			let valueItem = this.innerText;
 			selectValue.innerHTML = valueItem;
 			parent.classList.remove('_active')
 			_slideUp(selectBody, 300)
+		}
+
+		function collapseSelects(e) {
+			const targetClick = e.target.closest('[data-select-menu]')
+			selects.forEach(select => {
+				if (!targetClick || targetClick !== select) {
+					select.classList.remove('_active')
+					const selectBody = select.querySelector('[data-select-menu-drop-down]');
+					_slideUp(selectBody, 300)
+				}
+			});
+
 		}
 
 		let _slideUp = (target, duration = 500) => {
@@ -119,6 +143,7 @@ function selectMenu() {
 selectMenu()
 
 
+// swiper initialization
 const swiperHero = new Swiper('.swiper-hero', {
 	// Optional parameters
 	loop: true,

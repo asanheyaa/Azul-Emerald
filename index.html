@@ -22,18 +22,18 @@
                 </button>
                 <a href="/" aria-label="link homepage" class="header__logo"><img src="img/main/logo.svg" alt="logo"></a>
                 <div class="header__actions">
-                    <div class="header__select select">
-                        <div class="select__header">
-                            <span class="select__value">En</span>
-                            <div class="select__icon">
+                    <div class="header__select select" data-select-menu>
+                        <button class="select__header" type="button" aria-label="choose language" data-select-menu-button>
+                            <span class="select__value" data-select-menu-value>En</span>
+                            <span class="select__icon">
                                 <svg>
                                     <use xlink:href='img/icons/icons-sprite.svg#arrow-bottom'></use>
                                 </svg>
-                            </div>
-                        </div>
-                        <ul class="select__body">
-                            <li class="select__item"><span>En</span></li>
-                            <li class="select__item"><span>Ua</span></li>
+                            </span>
+                        </button>
+                        <ul class="select__body" data-select-menu-drop-down>
+                            <li class="select__item" data-select-menu-option><span>En</span></li>
+                            <li class="select__item" data-select-menu-option><span>Ua</span></li>
                         </ul>
                     </div>
                     <div class="header__buttons">
@@ -50,25 +50,25 @@
                         <div class="swiper-hero__slide swiper-slide ibg">
                             <picture>
                                 <source srcset="img/hero/hero-back_01.avif" type="image/avif">
-                                <img width="1440" height="822" src="img/hero/hero-back_01.jpg" alt="hero-back">
+                                <img loading="lazy" width="1440" height="822" src="img/hero/hero-back_01.jpg" alt="hero-back">
                             </picture>
                         </div>
                         <div class="swiper-hero__slide swiper-slide ibg">
                             <picture>
                                 <source srcset="img/hero/hero-back_02.avif" type="image/avif">
-                                <img width="1440" height="822" src="img/hero/hero-back_02.jpg" alt="hero-back">
+                                <img loading="lazy" width="1440" height="822" src="img/hero/hero-back_02.jpg" alt="hero-back">
                             </picture>
                         </div>
                         <div class="swiper-hero__slide swiper-slide ibg">
                             <picture>
                                 <source srcset="img/hero/hero-back_03.avif" type="image/avif">
-                                <img width="1440" height="822" src="img/hero/hero-back_03.jpg" alt="hero-back">
+                                <img loading="lazy" width="1440" height="822" src="img/hero/hero-back_03.jpg" alt="hero-back">
                             </picture>
                         </div>
                         <div class="swiper-hero__slide swiper-slide ibg">
                             <picture>
                                 <source srcset="img/hero/hero-back_04.avif" type="image/avif">
-                                <img width="1440" height="822" src="img/hero/hero-back_04.jpg" alt="hero-back">
+                                <img loading="lazy" width="1440" height="822" src="img/hero/hero-back_04.jpg" alt="hero-back">
                             </picture>
                         </div>
                     </div>
