@@ -8,7 +8,7 @@
     <meta name="description" content="hotel">
     <script src="js/font-loader.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/main-styles.css">
+    <link rel="stylesheet" href="css/main-styles.min.css">
     <title>Azul Emerald | Home</title>
 </head>
 
@@ -21,6 +21,27 @@
                     <span class="burger__line burger__line_02"></span>
                 </button>
                 <a href="/" aria-label="link homepage" class="header__logo"><img src="img/main/logo.svg" alt="logo"></a>
+                <div class="header__menu-wrapper">
+                    <nav class='header__menu header-menu'>
+                        <ul class='header-menu__list'>
+                            <li class='header-menu__item'>
+                                <a href='/' class='header-menu__link'>Homepage</a>
+                            </li>
+                            <li class='header-menu__item'>
+                                <a href='/' class='header-menu__link'>About us</a>
+                            </li>
+                            <li class='header-menu__item'>
+                                <a href='/' class='header-menu__link'>Activities</a>
+                            </li>
+                            <li class='header-menu__item'>
+                                <a href='/' class='header-menu__link'>Accomodations</a>
+                            </li>
+                            <li class='header-menu__item'>
+                                <a href='/' class='header-menu__link'>Blog</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
                 <div class="header__actions">
                     <div class="header__select select" data-select-menu>
                         <button class="select__header" type="button" aria-label="choose language" data-select-menu-button>
@@ -36,7 +57,7 @@
                             <li class="select__item" data-select-menu-option><span>Ua</span></li>
                         </ul>
                     </div>
-                    <div class="header__buttons">
+                    <div class="header__buttons" data-da=".header__menu-wrapper,1200,last">
                         <a href="" class="header__button header__button-back">Sign in</a>
                         <a href="" class="header__button header__button-transparent">Book Now</a>
                     </div>
@@ -47,26 +68,39 @@
             <section class="hero">
                 <div class="hero__swiper swiper-hero shadow">
                     <div class="swiper-hero__wrapper swiper-wrapper">
-                        <div class="swiper-hero__slide swiper-slide ibg">
+                        <div class="swiper-hero__slide swiper-slide">
                             <picture>
+                                <source srcset="img/hero/mobile/hero-back-mobile_01.avif" media="(max-width:767.98px)" type="image/avif">
+                                <source srcset="img/hero/mobile/hero-back-mobile_01.jpg" media="(max-width:767.98px)">
+                    
                                 <source srcset="img/hero/hero-back_01.avif" type="image/avif">
-                                <img loading="lazy" width="1440" height="822" src="img/hero/hero-back_01.jpg" alt="hero-back">
+                                <img fetchpriority="high" loading="eager" width="1440" height="822" src="img/hero/hero-back_01.jpg"
+                                    alt="hero-back">
                             </picture>
                         </div>
-                        <div class="swiper-hero__slide swiper-slide ibg">
+                        <div class="swiper-hero__slide swiper-slide">
                             <picture>
+                                <source srcset="img/hero/mobile/hero-back-mobile_02.avif" media="(max-width:767.98px)" type="image/avif">
+                                <source srcset="img/hero/mobile/hero-back-mobile_02.jpg" media="(max-width:767.98px)">
+                    
                                 <source srcset="img/hero/hero-back_02.avif" type="image/avif">
                                 <img loading="lazy" width="1440" height="822" src="img/hero/hero-back_02.jpg" alt="hero-back">
                             </picture>
                         </div>
-                        <div class="swiper-hero__slide swiper-slide ibg">
+                        <div class="swiper-hero__slide swiper-slide">
                             <picture>
+                                <source srcset="img/hero/mobile/hero-back-mobile_03.avif" media="(max-width:767.98px)" type="image/avif">
+                                <source srcset="img/hero/mobile/hero-back-mobile_03.jpg" media="(max-width:767.98px)">
+                    
                                 <source srcset="img/hero/hero-back_03.avif" type="image/avif">
                                 <img loading="lazy" width="1440" height="822" src="img/hero/hero-back_03.jpg" alt="hero-back">
                             </picture>
                         </div>
-                        <div class="swiper-hero__slide swiper-slide ibg">
+                        <div class="swiper-hero__slide swiper-slide">
                             <picture>
+                                <source srcset="img/hero/mobile/hero-back-mobile_04.avif" media="(max-width:767.98px)" type="image/avif">
+                                <source srcset="img/hero/mobile/hero-back-mobile_04.jpg" media="(max-width:767.98px)">
+                    
                                 <source srcset="img/hero/hero-back_04.avif" type="image/avif">
                                 <img loading="lazy" width="1440" height="822" src="img/hero/hero-back_04.jpg" alt="hero-back">
                             </picture>
@@ -83,7 +117,10 @@
                     </form>
                 </div>
             </section>
-            <div class="page__back">
+            <div class="page__back-box">
+                <div class="page__back">
+                    <img src="img/story/line-decor.svg" loading="lazy" alt="page-background">
+                </div>
                 <section class="story">
                     <div class="story__header header-story">
                         <div class="header-story__container">
@@ -162,7 +199,7 @@
                         <div class="card__background shadow shadow-medium ibg">
                             <picture>
                                 <source srcset="img/card/card__image_01.avif" type="image/avif">
-                                <img width="1440" loading="lazy" height="861" src="img/card/card__image_01.jpg" alt="card-back">
+                                <img width="1440" height="861"  loading="lazy" src="img/card/card__image_01.jpg" alt="card-back">
                             </picture>
                         </div>
                         <div class="card__body">
@@ -178,7 +215,7 @@
         <footer class="footer">
             <div class="footer__container">
                 <div class="footer__info info-footer">
-                    <a href="/" class="info-footer__logo" aria-label="link homepage"><img src="img/main/logo-dark.svg" alt="logo"></a>
+                    <a href="/" class="info-footer__logo" aria-label="link homepage"><img loading="lazy" src="img/main/logo-dark.svg" alt="logo"></a>
                     <form action="#" class="info-footer__form">
                         <input type="email" placeholder="Your email:" class="info-footer__input">
                         <button class="info-footer__button link">
